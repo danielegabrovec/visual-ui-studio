@@ -668,7 +668,7 @@ function emitNextJsSqlBundle(
 
   const actionsLines: string[] = [
     `'use server';`,
-    `// Next.js Server Actions CRUD generate da Visual UI Studio v3.0 (${dialect})`,
+    `// Next.js Server Actions CRUD generate da Visual UI Studio (${dialect})`,
     `import { revalidatePath } from 'next/cache';`,
     '',
   ];

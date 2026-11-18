@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Check, Loader2, Search, Zap } from 'lucide-react';
+import { STUDIO_VERSION } from '@shared/studio-version';
 import { createBlueprintNode, simulateBlueprintExecution } from '@shared/blueprint-ir';
 import { isEmbeddingOnlyModelName, pickPreferredLocalModel } from '@shared/ipc-contract';
 import {
@@ -1327,7 +1328,7 @@ export const ApplicationMenuBar: React.FC = () => {
       >
         <img src="./app-icon.png" width={44} height={44} alt="" />
         <h2 id="studio-about-title">Visual UI Studio</h2>
-        <p>Versione 0.1.0</p>
+        <p>Versione {STUDIO_VERSION}</p>
         <p>Copyright © 2026 Daniele Gabrovec</p>
         <p>
           <a href="https://github.com/danielegabrovec/visual-ui-studio/blob/main/LICENSE" target="_blank" rel="noreferrer">Licenza MIT</a>

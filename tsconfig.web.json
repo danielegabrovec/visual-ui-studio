@@ -20,6 +20,7 @@
     }
   },
   "include": [
+    "package.json",
     "src/shared/**/*",
     "src/renderer/src/**/*",
     "src/workers/codegen-worker/**/*",

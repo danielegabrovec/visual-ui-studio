@@ -1,4 +1,4 @@
-# Visual UI Studio 0.1
+# Visual UI Studio
 
 IDE visuale local-first di **Daniele Gabrovec**.
 

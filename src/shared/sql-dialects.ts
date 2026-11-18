@@ -889,7 +889,7 @@ export function compileSchemaDdl(
   const ordered = sortTablesTopologically(dialect, remappedTables);
   const chunks: string[] = [
     `-- Schema SQL: ${doc.name} (${dialect})`,
-    `-- Generato da Visual UI Studio v3.0 · Multi-Dialect SQL Engine`,
+    `-- Generato da Visual UI Studio · Multi-Dialect SQL Engine`,
   ];
 
   // Emit custom schema creation if needed on PostgreSQL / SQL Server

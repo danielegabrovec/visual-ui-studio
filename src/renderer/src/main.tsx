@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { STUDIO_VERSION } from '@shared/studio-version';
 import './styles/studio.css';
 import { App } from './App';
 
@@ -30,6 +31,7 @@ class StudioErrorBoundary extends React.Component<
 }
 
 const rootEl = document.getElementById('root');
+document.title = `Visual UI Studio ${STUDIO_VERSION}`;
 if (rootEl) {
   createRoot(rootEl).render(
     <React.StrictMode>

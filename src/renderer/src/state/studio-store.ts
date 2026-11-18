@@ -983,7 +983,7 @@ export const useStudioStore = create<StudioState>((set, get) => {
         id: 'boot_log_1',
         kind: 'info',
         source: 'Studio IDE',
-        message: 'Visual UI Studio v2.1 pronto — 26 target GUI, CSS Sync, Script TS, Blueprints, Three.js & Ollama Locale attivi.',
+        message: 'Visual UI Studio pronto. Canvas, CSS, Blueprint, Three.js e AI locale disponibili.',
         timestamp: Date.now(),
       },
     ],

@@ -861,7 +861,7 @@ export function buildSandboxPreviewHtml(
         }, 2400);
       }
 
-      // Listen for standalone v3.0 DOM CustomEvent('studio:toast')
+      // Handle toast events from generated DOM automations.
       if (typeof window.addEventListener === 'function') {
         window.addEventListener('studio:toast', function(ev) {
           const detail = (ev && ev.detail) || {};
@@ -1201,7 +1201,7 @@ export function buildSandboxPreviewHtml(
         });
       }
 
-      // Wire data-script-* attributes (supporting both standalone v3.0 DOM functions and legacy ctx handlers)
+      // Wire DOM automation functions and context-based handlers.
       document.querySelectorAll('[data-script-click]').forEach(function(el) {
         el.addEventListener('click', function(e) {
           if (el.tagName === 'A') e.preventDefault();

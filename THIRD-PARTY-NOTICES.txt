@@ -1,7 +1,7 @@
 Visual UI Studio - Third-party notices
 ======================================
 
-This file reproduces license and notice texts supplied with the 106 production npm packages for version 0.1.0.
+This file reproduces license and notice texts supplied with the 106 production npm packages for version 0.2.0.
 The separately distributed Electron runtime (45.3.4) includes its own license and the Chromium third-party notices.
 See LICENSE.electron.txt (LICENSE in the original Electron distribution) and LICENSES.chromium.html alongside the executable.
 

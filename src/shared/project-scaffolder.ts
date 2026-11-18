@@ -268,7 +268,7 @@ function buildBaseStylesheet(projectName: string, paletteId: WizardPaletteId = '
   const muted = isDark ? '#94a3b8' : '#475569';
   const border = isDark ? '#1e293b' : '#cbd5e1';
 
-  return `/* ${projectName.replace(/\*\//g, '* /')} — Visual UI Studio v3.0 Design Tokens & Layout Styles */
+  return `/* ${projectName.replace(/\*\//g, '* /')} — Visual UI Studio Design Tokens & Layout Styles */
 :root {
   --color-bg-canvas: ${bg};
   --color-bg-surface: ${surface};
@@ -1886,7 +1886,7 @@ import './globals.css';
 
 export const metadata = {
   title: ${JSON.stringify(projectName)},
-  description: 'Generato con Visual UI Studio v3.0 (Next.js 15 App Router)',
+  description: 'Generato con Visual UI Studio (Next.js 15 App Router)',
 };
 
 export default function RootLayout({ children }${isTs ? ': { children: React.ReactNode }' : ''}) {
@@ -2752,7 +2752,7 @@ pub fn run() {
     relativePath: 'README.md',
     content: `# ${projectName}
 
-Progetto reale generato con **Visual UI Studio v3.0**.
+Progetto generato con **Visual UI Studio**.
 
 - **Stack**: \`${spec.stackId}\` (${stackMeta.label})
 - **Linguaggio Primario**: \`${primaryLanguage}\`${pythonCompanion !== 'none' ? ` + Companion Python (\`${pythonCompanion}\`)` : ''}

@@ -1,6 +1,6 @@
 {
   "name": "frontend-next",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "productName": "Visual UI Studio",
   "description": "IDE visuale local-first con CSS bidirezionale, automazioni su file, 11 stack di progetto, SQL & Data Studio e AI locale",
   "author": "Daniele Gabrovec",
@@ -46,7 +46,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     },

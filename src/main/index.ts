@@ -1,6 +1,7 @@
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync } from 'node:fs';
 import { delimiter, isAbsolute, join } from 'node:path';
+import { STUDIO_VERSION } from '../shared/studio-version';
 import {
   app,
   BrowserWindow,
@@ -861,7 +862,7 @@ function createMainWindow(): void {
     height: 940,
     minWidth: 1100,
     minHeight: 700,
-    title: `Visual UI Studio ${app.isPackaged ? app.getVersion() : "0.1.0"}`,
+    title: `Visual UI Studio ${STUDIO_VERSION}`,
     backgroundColor: '#0b1120',
     icon: iconPath,
     autoHideMenuBar: true,

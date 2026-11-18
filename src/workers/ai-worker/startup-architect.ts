@@ -1860,7 +1860,7 @@ export function compileAiBlueprintToWizardSeed(
 // STARTUP ASSISTANT CHAT & AI PROJECT GENERATOR EXECUTION
 // ============================================================================
 
-const STARTUP_CHAT_SYSTEM_PROMPT = `Sei l'Architetto Software & UI di Visual UI Studio v2.1 (IDE Visuale Desktop & AI Locale).
+const STARTUP_CHAT_SYSTEM_PROMPT = `Sei l'Architetto Software & UI di Visual UI Studio (IDE Visuale Desktop & AI Locale).
 Rispondi sempre in italiano chiaro, tecnico, concreto e sintetico.
 Aiuti lo sviluppatore nella schermata iniziale a:
 1. Progettare l'architettura di nuove applicazioni (schermate, componenti, tabelle dati, form, KPI, navigazione, API, database).
@@ -1868,7 +1868,7 @@ Aiuti lo sviluppatore nella schermata iniziale a:
 3. Scrivere snippet puliti di codice, CSS, handler TypeScript o logiche Blueprint.
 Chiudi sempre suggerendo in 1 riga come trasformare l'idea in un progetto pronto cliccando "Crea Progetto da questa Conversazione".`;
 
-const PROJECT_ARCHITECT_SYSTEM_PROMPT = `Sei l'Architetto UI di Visual UI Studio v2.1.
+const PROJECT_ARCHITECT_SYSTEM_PROMPT = `Sei l'Architetto UI di Visual UI Studio.
 Progetta un'applicazione su misura in italiano basata esattamente sulla richiesta dell'utente.
 Rispondi ESCLUSIVAMENTE con un oggetto JSON valido conforme allo schema richiesto:
 - "projectName": nome professionale e specifico del progetto (se non già imposto dall'utente)

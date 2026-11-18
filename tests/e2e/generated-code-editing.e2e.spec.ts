@@ -1,6 +1,7 @@
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { _electron as electron, expect, test } from '@playwright/test';
+import { version } from '../../package.json';
 
 test('keeps manual bundle edits on reopen and uses them for saved files and scaffold exports', async ({}, testInfo) => {
   const fixture = testInfo.outputPath('code-editing');
@@ -91,7 +92,8 @@ test('keeps manual bundle edits on reopen and uses them for saved files and scaf
     await expect(aboutButton).toBeFocused();
     await aboutButton.press('Enter');
     const about = page.getByTestId('studio-about-dialog');
-    await expect(about).toContainText('Versione 0.1.0');
+    await expect(page).toHaveTitle(`Visual UI Studio ${version}`);
+    await expect(about).toContainText(`Versione ${version}`);
     await expect(about).toContainText('Daniele Gabrovec');
     await page.keyboard.press('Escape');
     await expect(about).toBeHidden();

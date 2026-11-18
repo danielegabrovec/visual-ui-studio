@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { STUDIO_VERSION } from '@shared/studio-version';
 import {
   Bot,
   Box,
@@ -689,7 +690,7 @@ export const ProjectLaunchHub: React.FC = () => {
                 <strong style={{ fontSize: 13.5, letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
                   Visual UI Studio
                 </strong>
-                <span className="badge blue">0.1.0</span>
+                <span className="badge blue">{STUDIO_VERSION}</span>
               </div>
               <div style={{ fontSize: 10.5, color: 'var(--text-secondary)', marginTop: 1 }}>
                 IDE Visuale &amp; AI Locale

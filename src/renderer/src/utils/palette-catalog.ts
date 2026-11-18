@@ -317,7 +317,7 @@ export const PALETTE_ELEMENT_PRESETS: PaletteElementPreset[] = [
           borderColor: '#334155',
           children: [
             { kind: 'text', name: 'WindowTitle', tag: 'span', text: 'Desktop Studio App', fontSize: 13, fontWeight: 600 },
-            { kind: 'control', controlType: 'badge', name: 'WindowStatusBadge', text: 'v2.0 Local' },
+            { kind: 'control', controlType: 'badge', name: 'WindowStatusBadge', text: 'Locale' },
           ],
         },
         parentId,
@@ -582,7 +582,7 @@ export const PALETTE_ELEMENT_PRESETS: PaletteElementPreset[] = [
           controlType: 'badge',
           name: 'StatusBadge',
           tag: 'span',
-          text: 'Attivo • v2.0',
+          text: 'Attivo',
           bg: '#10b98128',
           textColor: '#10b981',
           radius: 999,

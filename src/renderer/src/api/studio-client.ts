@@ -451,7 +451,7 @@ function createDefaultDemoProjectRecord(): PersistedBrowserProjectRecord {
     vfs_script_handlers: starterScript,
     vfs_bp_main: JSON.stringify(starterBp, null, 2),
     vfs_3d_main: JSON.stringify(starter3d, null, 2),
-    vfs_readme: `# NovaCommerce Studio\n\nProgetto multi-piattaforma generato con Visual UI Studio v2.0.\n`,
+    vfs_readme: `# NovaCommerce Studio\n\nProgetto multi-piattaforma generato con Visual UI Studio.\n`,
   };
 
   const sheets: SheetSummaryDTO[] = [
@@ -2548,7 +2548,7 @@ export function createBrowserStudioApi(): StudioPreloadApi {
                     {
                       role: 'system',
                       content:
-                        'Sei l\'Architetto Software & UI di Visual UI Studio v2.1. Rispondi sempre in italiano tecnico, sintetico e concreto.',
+                        'Sei l\'Architetto Software & UI di Visual UI Studio. Rispondi sempre in italiano tecnico, sintetico e concreto.',
                     },
                     ...(req.history ?? []).filter((m) => m.role !== 'system').slice(-8),
                     { role: 'user', content: req.prompt },
@@ -2624,7 +2624,7 @@ export function createBrowserStudioApi(): StudioPreloadApi {
                     {
                       role: 'system',
                       content:
-                        'Sei l\'Architetto UI di Visual UI Studio v2.1. Rispondi SOLO con JSON valido contenente projectName, paletteId ("dark-pro"|"clean-light"|"ocean-blue"|"emerald-studio"|"cyberpunk-neon"|"warm-corporate"), includeThreeScene (boolean), summary, screens ([{ name, title, subtitle, kpis: [{label,value,trend}], primaryActionLabel, primaryHandlerFn }]), handlersTs (codice TypeScript con export function).',
+                        'Sei l\'Architetto UI di Visual UI Studio. Rispondi SOLO con JSON valido contenente projectName, paletteId ("dark-pro"|"clean-light"|"ocean-blue"|"emerald-studio"|"cyberpunk-neon"|"warm-corporate"), includeThreeScene (boolean), summary, screens ([{ name, title, subtitle, kpis: [{label,value,trend}], primaryActionLabel, primaryHandlerFn }]), handlersTs (codice TypeScript con export function).',
                     },
                     {
                       role: 'user',

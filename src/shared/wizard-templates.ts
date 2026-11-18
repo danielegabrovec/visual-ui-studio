@@ -596,7 +596,7 @@ export function buildWizardProjectSeed(
     name: 'README.md',
     virtualPath: '/README.md',
     entryKind: 'source_file',
-    contentText: `# ${projectName}\n\nGenerato con **Visual UI Studio v2.0** (${spec.primaryTarget} • ${spec.stylingPreset} • Modalità ${spec.layoutMode === 'freeform' ? 'Posizionamento Libero (X,Y)' : 'Auto-Layout'}).\n`,
+    contentText: `# ${projectName}\n\nGenerato con **Visual UI Studio** (${spec.primaryTarget} • ${spec.stylingPreset} • Modalità ${spec.layoutMode === 'freeform' ? 'Posizionamento Libero (X,Y)' : 'Auto-Layout'}).\n`,
   });
 
   return {

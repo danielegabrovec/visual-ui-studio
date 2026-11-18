@@ -1,10 +1,14 @@
 @echo off
-title Visual UI Studio 0.1.0
+setlocal
+title Visual UI Studio
 cd /d "%~dp0"
 set ELECTRON_RUN_AS_NODE=
-if not exist "out\main\index.js" (
-  echo [Visual UI Studio] Compilazione bundle iniziale in corso...
-  call npm run build
+set "STUDIO_INSTALLED=%LOCALAPPDATA%\Programs\Visual UI Studio\Visual UI Studio.exe"
+if exist "%STUDIO_INSTALLED%" (
+  start "" "%STUDIO_INSTALLED%"
+  exit /b 0
 )
-start "" "%~dp0node_modules\electron\dist\electron.exe" "%~dp0out\main\index.js"
-exit /b 0
+call npm run build
+if errorlevel 1 exit /b 1
+call npm run start
+exit /b %errorlevel%
