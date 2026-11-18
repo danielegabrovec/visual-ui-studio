@@ -1,0 +1,95 @@
+{
+  "name": "frontend-next",
+  "version": "0.1.0",
+  "productName": "Visual UI Studio",
+  "description": "IDE visuale local-first con CSS bidirezionale, automazioni su file, 11 stack di progetto, SQL & Data Studio e AI locale",
+  "author": "Daniele Gabrovec",
+  "license": "MIT",
+  "private": true,
+  "main": "./out/main/index.js",
+  "scripts": {
+    "start": "electron ./out/main/index.js",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "dist:win": "npm run build && npm run package:win",
+    "package:win": "electron-builder --win nsis --x64 --publish never"
+  },
+  "build": {
+    "appId": "com.gabrovec.visualuistudio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "resources/icon.ico",
+      "resources/icon.png",
+      "LICENSE",
+      "THIRD-PARTY-NOTICES.txt",
+      "PRIVACY.md",
+      "package.json"
+    ],
+    "extraFiles": [
+      "LICENSE",
+      "THIRD-PARTY-NOTICES.txt",
+      "PRIVACY.md"
+    ],
+    "asarUnpack": [
+      "out/main/**/*"
+    ],
+    "win": {
+      "icon": "resources/icon.ico",
+      "artifactName": "Visual-UI-Studio-Setup-${version}-${arch}.${ext}",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Visual UI Studio",
+      "runAfterFinish": false,
+      "deleteAppDataOnUninstall": false,
+      "installerIcon": "resources/icon.ico",
+      "uninstallerIcon": "resources/icon.ico"
+    }
+  },
+  "dependencies": {
+    "immer": "^10.1.1",
+    "lucide-react": "^0.475.0",
+    "mssql": "^12.7.14",
+    "mysql2": "^3.24.6",
+    "pg": "^8.23.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.187.0",
+    "zod": "4.6.7",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/mssql": "^12.3.0",
+    "@types/node": "^22.14.0",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "45.3.4",
+    "electron-builder": "26.18.1",
+    "electron-vite": "^3.0.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0",
+    "vitest": "5.1.1"
+  }
+}

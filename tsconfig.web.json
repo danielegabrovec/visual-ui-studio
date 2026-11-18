@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@renderer/*": ["src/renderer/src/*"],
+      "@codegen/*": ["src/workers/codegen-worker/*"]
+    }
+  },
+  "include": [
+    "src/shared/**/*",
+    "src/renderer/src/**/*",
+    "src/workers/codegen-worker/**/*",
+    "tests/automation.test.ts",
+    "tests/blueprint-script.test.ts",
+    "tests/browser-studio.test.ts",
+    "tests/css-pro-controls.test.ts",
+    "tests/three-studio.test.ts"
+  ],
+  "exclude": [
+    "src/workers/codegen-worker/index.ts"
+  ]
+}
